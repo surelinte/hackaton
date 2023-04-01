@@ -4384,6 +4384,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1366455481}
   - component: {fileID: 1366455480}
+  - component: {fileID: 1366455482}
   m_Layer: 0
   m_Name: Logic
   m_TagString: Untagged
@@ -4426,6 +4427,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1366455482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1366455479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 271441bb3ae58494ead7c5db5ad2e32f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wheel: {fileID: 1705533221}
+  trigger: {fileID: 245766228}
 --- !u!1 &1432029885
 GameObject:
   m_ObjectHideFlags: 0
@@ -5026,6 +5041,7 @@ GameObject:
   - component: {fileID: 1705533225}
   - component: {fileID: 1705533224}
   - component: {fileID: 1705533223}
+  - component: {fileID: 1705533226}
   m_Layer: 0
   m_Name: DrumButton
   m_TagString: Untagged
@@ -5097,13 +5113,13 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 0}
-        m_TargetAssemblyTypeName: 
-        m_MethodName: 
+      - m_Target: {fileID: 1705533226}
+        m_TargetAssemblyTypeName: Wheel, Assembly-CSharp
+        m_MethodName: Roll
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: 
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
           m_StringArgument: 
@@ -5147,6 +5163,24 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1705533221}
   m_CullTransparentMesh: 1
+--- !u!114 &1705533226
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1705533221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0ecc843bdcb70974f8afc150638ea8c4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  state: 0
+  speed: 1000
+  timeMin: 1
+  timeMax: 2
+  slowTime: 0.5
+  stopTime: 1
 --- !u!1 &1735131530
 GameObject:
   m_ObjectHideFlags: 0
