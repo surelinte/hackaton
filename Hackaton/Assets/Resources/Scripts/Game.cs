@@ -29,7 +29,7 @@ public class Game : MonoBehaviour
     public void Start() {
         currentEnemies = new List<GameObject>(enemies);
         AddScore(0);
-        bulletSlot = Random.Range(3, 6);
+        Roll(3, 5);
         PickEnemy();
         wheel.GetComponent<Wheel>().Subscribe(() => {
             wheel.SetActive(false);
@@ -39,8 +39,9 @@ public class Game : MonoBehaviour
     }
 
     public void PickEnemy() {
+        Debug.Log(currentEnemies.Count + " " + level + " " + enemies.Count);
         if (currentEnemies.Count == 0) {
-            if (level + 1 == enemies.Count) {
+            if (level == enemies.Count) {
                 SetEnemy(boss);
                 return;
             }
@@ -59,8 +60,8 @@ public class Game : MonoBehaviour
         enemy = gameObj.GetComponent<Character>();
     }
 
-    public void Roll() {
-
+    public void Roll(int min = 0, int max = 5) {
+        bulletSlot = Random.Range(min, max + 1);
     }
 
     public void Shoot() {
@@ -107,7 +108,12 @@ public class Game : MonoBehaviour
     void Win() {
         Debug.Log("win");
         AddScore(scores[level]);
-        hudLogic.YouWin();
+        if (enemy.gameObject == boss) {
+            hudLogic.TakeMoney();
+        }
+        else {
+            hudLogic.YouWin();
+        }
     }
 
     void Lose() {
@@ -120,7 +126,7 @@ public class Game : MonoBehaviour
         level = 0;
         wheel.SetActive(true);
         trigger.SetActive(false);
-        bulletSlot = Random.Range(0, 6);
+        Roll();
         PickEnemy();
     }
 
@@ -128,7 +134,7 @@ public class Game : MonoBehaviour
         level++;
         wheel.SetActive(true);
         trigger.SetActive(false);
-        bulletSlot = Random.Range(0, 6);
+        Roll();
         PickEnemy();
     }
 }
