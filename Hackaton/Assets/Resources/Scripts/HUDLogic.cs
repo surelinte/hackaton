@@ -23,6 +23,8 @@ public class HUDLogic : MonoBehaviour
     public void OpenMenu()
     {
         MainMenu.SetActive(true);
+        GameWindow.SetActive(false);
+        LeaderBoard.SetActive(false);
     }
 
     public void StartGame()
