@@ -18,11 +18,14 @@ public class Game : MonoBehaviour
     public TextMeshProUGUI scoreText;
     
     int bulletSlot = 5;
-    public List<GameObject> enemyPrefabs;
+    public List<GameObject> enemies;
     public GameObject boss;
+    List<GameObject> currentEnemies;
     Character enemy;
+    int level = 0;
 
     public void Start() {
+        currentEnemies = new List<GameObject>(enemies);
         AddScore(0);
         bulletSlot = Random.Range(3, 6);
         PickEnemy();
@@ -34,17 +37,24 @@ public class Game : MonoBehaviour
     }
 
     public void PickEnemy() {
-        if (enemyPrefabs.Count == 0) {
-            SetEnemy(boss);
-            return;
+        if (enemies.Count == 0) {
+            if (level == enemies.Count) {
+                SetEnemy(boss);
+                return;
+            }
+            currentEnemies = new List<GameObject>(enemies);
         }
-        GameObject randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Count)];
-        enemyPrefabs.Remove(randomEnemy);
+        GameObject randomEnemy = currentEnemies[Random.Range(0, currentEnemies.Count)];
+        currentEnemies.Remove(randomEnemy);
         SetEnemy(randomEnemy);
     }
 
     void SetEnemy(GameObject gameObj) {
-        enemy = Instantiate(gameObj, gameTransform).GetComponent<Character>();
+        if (enemy != null) {
+            enemy.gameObject.SetActive(false);
+        }
+        gameObj.SetActive(true);
+        enemy = gameObj.GetComponent<Character>();
     }
 
     public void Roll() {

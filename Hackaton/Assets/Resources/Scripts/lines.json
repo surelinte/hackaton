@@ -1,8 +1,28 @@
 {
 	"characters": [
 		{
+			"name": "Philosopher",
+			"lines": [
+				"line11",
+				"line12",
+				"line13"
+			]
+		},
+		{
 			"name": "RixDalton",
-			"lines": [ "line1", "line2" ]
+			"lines": [
+				"line21",
+				"line22",
+				"line23"
+			]
+		},
+		{
+			"name": "Horney",
+			"lines": [
+				"line31",
+				"line32",
+				"line33"
+			]
 		}
 	]
 }
