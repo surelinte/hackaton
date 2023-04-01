@@ -108,6 +108,7 @@ public class Game : MonoBehaviour
 
     void Lose() {
         Debug.Log("lose");
+        AddScore(-score + 100);
         hudLogic.YouFail();
     }
 
