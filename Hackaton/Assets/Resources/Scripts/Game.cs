@@ -100,6 +100,10 @@ public class Game : MonoBehaviour
         scoreText.text = score.ToString();
     }
 
+    public int GetScore() {
+        return score;
+    }
+
     void Win() {
         Debug.Log("win");
         AddScore(scores[level]);

@@ -4497,6 +4497,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e0c6f33eeab65b42baf04f40add3563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  game: {fileID: 1366455484}
   localServer: 0
   inputName: {fileID: 1852740483}
   content: {fileID: 1169138747}

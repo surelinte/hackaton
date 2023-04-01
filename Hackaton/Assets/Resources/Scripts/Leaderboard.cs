@@ -6,6 +6,7 @@ using UnityEngine.Networking;
 
 public class Leaderboard : MonoBehaviour
 {
+    public Game game;
     public bool localServer = false;
 
     public TMP_InputField inputName;
@@ -32,7 +33,7 @@ public class Leaderboard : MonoBehaviour
     }
 
     public void SendScore() {
-        SendScore(inputName.text, 100);
+        SendScore(inputName.text, game.GetScore());
     }
 
     public void SendScore(string name, int score) {
