@@ -24,6 +24,8 @@ public class Game : MonoBehaviour
     Character enemy;
     int level = 0;
 
+    public int[] scores = {100,300,500,1000,3000,5000,10000};
+
     public void Start() {
         currentEnemies = new List<GameObject>(enemies);
         AddScore(0);
@@ -37,8 +39,8 @@ public class Game : MonoBehaviour
     }
 
     public void PickEnemy() {
-        if (enemies.Count == 0) {
-            if (level == enemies.Count) {
+        if (currentEnemies.Count == 0) {
+            if (level + 1 == enemies.Count) {
                 SetEnemy(boss);
                 return;
             }
@@ -81,14 +83,16 @@ public class Game : MonoBehaviour
 
     void SetTurnEnemy() {
         Debug.Log("enemy turn, " + bulletSlot.ToString());
+        turn = Turn.Enemy;
         enemy.HideBubble();
-        // enemy shooting animation
-        if (bulletSlot == 0) {
-            Win();
-            return;
-        }
-        bulletSlot--;
-        SetTurnPlayer();
+        StartCoroutine(enemy.TakeATurn(bulletSlot == 0, () => {
+            if (bulletSlot == 0) {
+                Win();
+                return;
+            }
+            bulletSlot--;
+            SetTurnPlayer();
+        }));
     }
 
     void AddScore(int add) {
@@ -98,6 +102,7 @@ public class Game : MonoBehaviour
 
     void Win() {
         Debug.Log("win");
+        AddScore(scores[level]);
         hudLogic.YouWin();
     }
 
@@ -106,4 +111,19 @@ public class Game : MonoBehaviour
         hudLogic.YouFail();
     }
 
+    public void StartAgain() {
+        level = 0;
+        wheel.SetActive(true);
+        trigger.SetActive(false);
+        bulletSlot = Random.Range(0, 6);
+        PickEnemy();
+    }
+
+    public void NextLevel() {
+        level++;
+        wheel.SetActive(true);
+        trigger.SetActive(false);
+        bulletSlot = Random.Range(0, 6);
+        PickEnemy();
+    }
 }

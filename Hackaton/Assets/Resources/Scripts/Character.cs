@@ -9,16 +9,23 @@ public class Character : MonoBehaviour
     public GameObject bubble;
     public TextMeshProUGUI bubbleText;
 
+    public GameObject Portrait;
+    public GameObject PortraitShooting;
+
     List<string> lines;
 
     void Start() {
+        Init();
+    }
+
+    void Init() {
         LinesLoader linesLoader = FindObjectOfType<LinesLoader>();
         lines = linesLoader.GetLines(id);
     }
 
     public void ShowBubble() {
         if (lines.Count == 0) {
-            return;
+            Init();
         }
         string randomLine = lines[Random.Range(0, lines.Count)];
         lines.Remove(randomLine);
@@ -30,6 +37,20 @@ public class Character : MonoBehaviour
         bubble.SetActive(false);
     }
 
-    public void TakeATurn() {
+    public IEnumerator TakeATurn(bool lose, System.Action callback) {
+        Portrait.SetActive(false);
+        PortraitShooting.SetActive(true);
+        yield return new WaitForSeconds(1);
+        Debug.Log("enemy shoot");
+        if (lose) {
+            // splash, shoot sound, etc
+        }
+        else {
+            // click sound
+        }
+        yield return new WaitForSeconds(1);
+        PortraitShooting.SetActive(false);
+        Portrait.SetActive(true);
+        callback();
     }
 }

@@ -61,8 +61,8 @@ public class Wheel : MonoBehaviour
             if (timer < 0) {
                 timer = 0;
                 state = State.Idle;
+                onStopped?.Invoke();
             }
-            onStopped?.Invoke();
         }
     }
 }
