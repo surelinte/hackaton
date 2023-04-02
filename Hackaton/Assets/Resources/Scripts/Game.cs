@@ -18,6 +18,7 @@ public class Game : MonoBehaviour
     
     int score = 0;
     public TextMeshProUGUI scoreText;
+    public TextMeshProUGUI winScoreText;
     
     int bulletSlot = 5;
     public List<GameObject> enemies;
@@ -108,6 +109,7 @@ public class Game : MonoBehaviour
     void AddScore(int add) {
         score += add;
         scoreText.text = score.ToString();
+        winScoreText.text = "Рикскоины: " + score.ToString();
     }
 
     public int GetScore() {
@@ -116,7 +118,8 @@ public class Game : MonoBehaviour
 
     void Win() {
         Debug.Log("win");
-        AddScore(scores[level]);
+        int addScore = Mathf.RoundToInt(Random.Range(0.9f * scores[level], 1.1f * scores[level]));
+        AddScore(addScore);
         if (enemy.gameObject == boss) {
             hudLogic.TakeMoney();
         }
@@ -127,7 +130,7 @@ public class Game : MonoBehaviour
 
     void Lose() {
         Debug.Log("lose");
-        AddScore(-score + 100);
+        AddScore(-score);
         hudLogic.YouFail();
     }
 
