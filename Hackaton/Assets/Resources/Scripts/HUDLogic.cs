@@ -79,6 +79,7 @@ public class HUDLogic : MonoBehaviour
         LeaderBoard.SetActive(true);
         LeaderList.SetActive(false);
         EnterNameWindow.SetActive(true);
+        Sound.Play("money");
     }
 
     public void GameContinue()

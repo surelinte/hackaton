@@ -64,6 +64,11 @@ public class Character : MonoBehaviour
         callback();
     }
 
+    public void Show() {
+        Init();
+        gameObject.SetActive(true);
+    }
+
     public void Hide() {
         splash.gameObject.SetActive(false);
         gameObject.SetActive(false);

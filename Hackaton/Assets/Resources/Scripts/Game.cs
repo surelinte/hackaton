@@ -76,8 +76,8 @@ public class Game : MonoBehaviour
         if (enemy != null) {
             enemy.Hide();
         }
-        gameObj.SetActive(true);
         enemy = gameObj.GetComponent<Character>();
+        enemy.Show();
     }
 
     public void Roll() {
