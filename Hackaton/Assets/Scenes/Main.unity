@@ -702,15 +702,32 @@ MonoBehaviour:
   hudLogic: {fileID: 1366455480}
   wheel: {fileID: 1705533221}
   trigger: {fileID: 245766228}
+  bullet: {fileID: 1860126344}
   scoreText: {fileID: 773384614}
   enemies:
   - {fileID: 232645096665188933}
   - {fileID: 1856254684}
   boss: {fileID: 1055650388}
   scores: 640000002c010000f4010000e8030000b80b00008813000010270000
+  chances:
+  - 90
+  - 80
+  - 70
+  - 60
+  - 50
+  - 40
+  colors:
+  - {r: 1, g: 1, b: 0, a: 1}
+  - {r: 0, g: 1, b: 0, a: 1}
+  - {r: 0, g: 0, b: 1, a: 1}
 --- !u!1 &1705533221 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3948488423899578104, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+  m_PrefabInstance: {fileID: 1318746636824938056}
+  m_PrefabAsset: {fileID: 0}
+--- !u!224 &1705533222 stripped
+RectTransform:
+  m_CorrespondingSourceObject: {fileID: 3948488423899578107, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
   m_PrefabInstance: {fileID: 1318746636824938056}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1762303084 stripped
@@ -733,6 +750,82 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 3948488424017285889, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
   m_PrefabInstance: {fileID: 1318746636824938056}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1860126342
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1860126343}
+  - component: {fileID: 1860126345}
+  - component: {fileID: 1860126344}
+  m_Layer: 0
+  m_Name: Bullet
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1860126343
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860126342}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1705533222}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -5.4, y: 104.4}
+  m_SizeDelta: {x: 100, y: 100}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1860126344
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860126342}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: b1ac66cc3660eff49b16d861673ba4c7, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1860126345
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1860126342}
+  m_CullTransparentMesh: 1
 --- !u!1 &2010138579 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 32337267346890899, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
@@ -916,6 +1009,10 @@ PrefabInstance:
     - target: {fileID: 3394833296976130884, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_Name
       value: Main
+      objectReference: {fileID: 0}
+    - target: {fileID: 3394833296976130884, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3394833296976130907, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_Pivot.x
@@ -1121,6 +1218,10 @@ PrefabInstance:
     - target: {fileID: 3948488424029248231, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_Name
       value: Game
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948488424029248231, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3948488424554035595, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
@@ -13,8 +14,9 @@ public class Game : MonoBehaviour
 
     public GameObject wheel;
     public GameObject trigger;
+    public Image bullet;
     
-    int score = 100;
+    int score = 0;
     public TextMeshProUGUI scoreText;
     
     int bulletSlot = 5;
@@ -24,13 +26,18 @@ public class Game : MonoBehaviour
     Character enemy;
     int level = 0;
 
-    public int[] scores = {100,300,500,1000,3000,5000,10000};
+    public int[] scores = {100, 300, 500, 1000, 2000, 5000};
+    public float[] chances = {90, 80, 70, 60, 50, 40};
+    
+    public Color[] colors;
+    Color color;
 
     public void Start() {
         currentEnemies = new List<GameObject>(enemies);
         AddScore(0);
-        Roll(3, 5);
+        Roll();
         PickEnemy();
+        NextColor();
         wheel.GetComponent<Wheel>().Subscribe(() => {
             wheel.SetActive(false);
             trigger.SetActive(true);
@@ -59,8 +66,11 @@ public class Game : MonoBehaviour
         enemy = gameObj.GetComponent<Character>();
     }
 
-    public void Roll(int min = 0, int max = 5) {
-        bulletSlot = Random.Range(min, max + 1);
+    public void Roll() {
+        float rnd = 100 * Random.value;
+        bool win = rnd < chances[level];
+        bulletSlot = 2 * Random.Range(0, 3) + (win ? 1 : 0);
+        Debug.Log("random roll " + rnd + " " + chances[level] + " " + bulletSlot);
     }
 
     public void Shoot() {
@@ -135,5 +145,10 @@ public class Game : MonoBehaviour
         trigger.SetActive(false);
         Roll();
         PickEnemy();
+    }
+
+    public void NextColor() {
+        color = colors[Random.Range(0, colors.Length)];
+        bullet.color = color;
     }
 }
