@@ -703,6 +703,7 @@ MonoBehaviour:
   money: {fileID: 8300000, guid: f0a8b5bacb8d6ec41bd28de640922d14, type: 3}
   none: {fileID: 8300000, guid: baef5c75391e38b4d9f257eaec32117e, type: 3}
   win: {fileID: 8300000, guid: 0620a418741686a43a176491bd152645, type: 3}
+  menu: {fileID: 8300000, guid: c1da4e7ac1af7f84aa38721ac3b93a90, type: 3}
 --- !u!1 &1140775507
 GameObject:
   m_ObjectHideFlags: 0

@@ -11,6 +11,7 @@ public class Sound : MonoBehaviour
     public AudioClip money;
     public AudioClip none;
     public AudioClip win;
+    public AudioClip menu;
 
     static AudioSource source;
     static Dictionary<string, AudioClip> sound = new Dictionary<string, AudioClip>();
@@ -26,9 +27,14 @@ public class Sound : MonoBehaviour
         sound["money"] = money;
         sound["none"] = none;
         sound["win"] = win;
+        sound["menu"] = menu;
     }
 
     public static void Play(string id) {
         source.PlayOneShot(sound[id]);
+    }
+
+    public static void Stop() {
+        source.Stop();
     }
 }

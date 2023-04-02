@@ -24,6 +24,7 @@ public class HUDLogic : MonoBehaviour
 
     public void OpenMenu()
     {
+        Sound.Play("menu");
         MainMenu.SetActive(true);
         WinWindow.SetActive(false);
         FailWindow.SetActive(false);
@@ -34,6 +35,7 @@ public class HUDLogic : MonoBehaviour
 
     public void StartGame()
     {
+        Sound.Stop();
         MainMenu.SetActive(false);
         GameWindow.SetActive(true);
         GameHUD.SetActive(true);
