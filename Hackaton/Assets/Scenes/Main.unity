@@ -1008,19 +1008,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1566244902058911972, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1566244902058911972, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1566244902058911972, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 343.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1566244902058911972, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -60
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2004900324497714833, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
@@ -1032,7 +1032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3394833296976130884, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3394833296976130907, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_Pivot.x
@@ -1120,35 +1120,35 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3681394806500848798, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3681394806500848798, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3681394806500848798, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 343.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3681394806500848798, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -200
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4829625258998164613, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4829625258998164613, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4829625258998164613, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 343.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4829625258998164613, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: -340
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5086857731002621023, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
@@ -1209,7 +1209,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3071739037331211040, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3071739037599263462, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
@@ -1313,7 +1313,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3948488424029248231, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3948488424242825871, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
