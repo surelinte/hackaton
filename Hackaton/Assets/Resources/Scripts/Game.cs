@@ -141,10 +141,17 @@ public class Game : MonoBehaviour
         }
     }
 
-    void Lose() {
-        Debug.Log("lose");
+    IEnumerator LoseCoroutine() {
+        splash.transform.parent.gameObject.SetActive(true);
+        yield return new WaitForSeconds(1.5f);
+        splash.transform.parent.gameObject.SetActive(false);
         AddScore(-score);
         hudLogic.YouFail();
+    }
+
+    void Lose() {
+        Debug.Log("lose");
+        StartCoroutine(LoseCoroutine());
     }
 
     public void StartAgain() {

@@ -719,7 +719,7 @@ MonoBehaviour:
   wheel: {fileID: 1705533221}
   trigger: {fileID: 245766228}
   bullet: {fileID: 951324202}
-  splash: {fileID: 2041067001}
+  splash: {fileID: 2039966042}
   scoreText: {fileID: 773384614}
   winScoreText: {fileID: 1318746636824938057}
   enemies:
@@ -788,9 +788,9 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3394833296976130907, guid: a40bb0ec31b8f1d46b6013bdc2d85ee6, type: 3}
   m_PrefabInstance: {fileID: 245325777150069012}
   m_PrefabAsset: {fileID: 0}
---- !u!198 &2041067001 stripped
+--- !u!198 &2039966042 stripped
 ParticleSystem:
-  m_CorrespondingSourceObject: {fileID: 4834207714664465672, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+  m_CorrespondingSourceObject: {fileID: 1136433747589795886, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
   m_PrefabInstance: {fileID: 1318746636824938056}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &32337267039643456
@@ -1094,7 +1094,19 @@ PrefabInstance:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1136433746759372296, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1136433747589795886, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: EmissionModule.rateOverTime.scalar
+      value: 1000
+      objectReference: {fileID: 0}
     - target: {fileID: 1934105774235494114, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3071739037331211040, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -1202,6 +1214,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3948488424313579078, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3948488424395956403, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
       value: 1
@@ -1210,10 +1226,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1366455484}
+    - target: {fileID: 3948488424978863712, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3948488425105807008, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1366455480}
+    - target: {fileID: 5434526546036991289, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5831429196624616253, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6895108947778475912, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
       value: 0
