@@ -9,6 +9,7 @@ public class LinesLoader : MonoBehaviour
 
     [System.Serializable]
     public class Character {
+        public string id;
         public string name;
         public string[] lines;
     }
@@ -17,6 +18,7 @@ public class LinesLoader : MonoBehaviour
         public Character[] characters;
     }
 
+    Dictionary<string, string> names = new Dictionary<string, string>();
     Dictionary<string, string[]> lines = new Dictionary<string, string[]>();
 
     bool initialized = false;
@@ -26,13 +28,19 @@ public class LinesLoader : MonoBehaviour
         }
         CharacterData characterData = JsonUtility.FromJson<CharacterData>(linesJson.text);
         foreach (Character character in characterData.characters) {
-            lines[character.name] = character.lines;
+            names[character.id] = character.name;
+            lines[character.id] = character.lines;
         }
         initialized = true;
     }
 
     void Start() {
         Init();
+    }
+
+    public string GetName(string id) {
+        Init();
+        return names[id];
     }
 
     public List<string> GetLines(string id) {

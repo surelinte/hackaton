@@ -729,10 +729,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 51.25
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1419,10 +1419,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 51.25
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1709,10 +1709,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58
+  m_fontSize: 72
   m_fontSizeBase: 58
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -1745,7 +1745,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -84.998474, y: 0, z: -36.12439, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -3998,10 +3998,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58
+  m_fontSize: 72
   m_fontSizeBase: 58
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -4034,7 +4034,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -80.748535, y: 0, z: -40.374268, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -4248,10 +4248,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 48
+  m_fontSize: 51.25
   m_fontSizeBase: 48
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -6067,10 +6067,10 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 58
+  m_fontSize: 72
   m_fontSizeBase: 58
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
@@ -6103,7 +6103,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: -80.748535, y: 0, z: -38.249268, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -6249,8 +6249,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b402adc998da1b43b768ae10f2716ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: Philosopher
+  id: Hackathoncij
   bubble: {fileID: 3886989343444602391}
+  nameText: {fileID: 1258655421035133298}
   bubbleText: {fileID: 3886989343632029206}
   Portrait: {fileID: 3886989343592006238}
   PortraitShooting: {fileID: 3948488423503553812}
@@ -7333,6 +7334,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: Horney
   bubble: {fileID: 1318746636031802837}
+  nameText: {fileID: 1318746637292332942}
   bubbleText: {fileID: 1318746637224455463}
   Portrait: {fileID: 1318746636189629685}
   PortraitShooting: {fileID: 1318746636401776911}
@@ -7354,7 +7356,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &3948488424029248230
 RectTransform:
   m_ObjectHideFlags: 0
@@ -8017,8 +8019,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3b402adc998da1b43b768ae10f2716ad, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  id: RixDalton
+  id: Dalton
   bubble: {fileID: 1318746636970172191}
+  nameText: {fileID: 1318746636009389099}
   bubbleText: {fileID: 1318746636051082082}
   Portrait: {fileID: 1318746636684336531}
   PortraitShooting: {fileID: 1318746636915623553}

@@ -7,6 +7,7 @@ public class Character : MonoBehaviour
 {
     public string id;
     public GameObject bubble;
+    public TextMeshProUGUI nameText;
     public TextMeshProUGUI bubbleText;
 
     public GameObject Portrait;
@@ -20,6 +21,7 @@ public class Character : MonoBehaviour
 
     void Init() {
         LinesLoader linesLoader = FindObjectOfType<LinesLoader>();
+        nameText.text = linesLoader.GetName(id);
         lines = linesLoader.GetLines(id);
     }
 
