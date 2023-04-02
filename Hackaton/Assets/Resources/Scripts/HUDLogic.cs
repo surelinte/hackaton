@@ -43,6 +43,8 @@ public class HUDLogic : MonoBehaviour
       //  MainMenu.SetActive(false);
         GameHUD.SetActive(false);
         LeaderBoard.SetActive(true);
+        EnterNameWindow.SetActive(false);
+        LeaderList.SetActive(true);
     }
 
     public void CloseLeaderBoard()
@@ -90,7 +92,8 @@ public class HUDLogic : MonoBehaviour
     public void GameAgain()
     {
         FailWindow.SetActive(false);
-        GameWindow.SetActive(true);
-        GameHUD.SetActive(true);
+        GameWindow.SetActive(false);
+        GameHUD.SetActive(false);
+        MainMenu.SetActive(true);
     }
 }
