@@ -704,7 +704,6 @@ GameObject:
   - component: {fileID: 6219540612085111233}
   - component: {fileID: 4259123302961531353}
   - component: {fileID: 5612094318462542553}
-  - component: {fileID: 5661818859675329836}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -803,7 +802,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Delegates:
-  - eventID: 2
+  - eventID: 4
     callback:
       m_PersistentCalls:
         m_Calls:
@@ -819,10 +818,6 @@ MonoBehaviour:
             m_StringArgument: 
             m_BoolArgument: 0
           m_CallState: 2
-  - eventID: 3
-    callback:
-      m_PersistentCalls:
-        m_Calls: []
 --- !u!114 &4259123302961531353
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -835,6 +830,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c520fdff4bebbe7418bdbec153d33d29, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  anim: {fileID: 5612094318462542553}
 --- !u!95 &5612094318462542553
 Animator:
   serializedVersion: 5
@@ -843,7 +839,7 @@ Animator:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5265768767537706948}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: 81d07bd4c79ba2d43ad8e17b2adee2c3, type: 2}
   m_CullingMode: 0
@@ -856,22 +852,6 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
---- !u!111 &5661818859675329836
-Animation:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265768767537706948}
-  m_Enabled: 1
-  serializedVersion: 3
-  m_Animation: {fileID: 7400000, guid: 1ea9b3915bdcd034d8e0df7e365e74aa, type: 2}
-  m_Animations:
-  - {fileID: 7400000, guid: 1ea9b3915bdcd034d8e0df7e365e74aa, type: 2}
-  m_WrapMode: 0
-  m_PlayAutomatically: 0
-  m_AnimatePhysics: 0
-  m_CullingType: 0
 --- !u!1 &7896284120105513341
 GameObject:
   m_ObjectHideFlags: 0
