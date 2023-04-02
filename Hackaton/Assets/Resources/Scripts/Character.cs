@@ -53,24 +53,27 @@ public class Character : MonoBehaviour
             splash.color = game.GetColor();
             splash.gameObject.SetActive(true);
             Sound.Play("fail");
+            yield return new WaitForSeconds(1.5f);
         }
         else {
             // click sound
             Sound.Play("none");
+            yield return new WaitForSeconds(1.5f);
+            Portrait.SetActive(true);
+            PortraitShooting.SetActive(false);
         }
-        yield return new WaitForSeconds(1);
-        PortraitShooting.SetActive(false);
-        Portrait.SetActive(true);
         callback();
     }
 
     public void Show() {
         Init();
+        Portrait.SetActive(true);
+        PortraitShooting.SetActive(false);
+        splash.gameObject.SetActive(false);
         gameObject.SetActive(true);
     }
 
     public void Hide() {
-        splash.gameObject.SetActive(false);
         gameObject.SetActive(false);
     }
 }

@@ -1051,6 +1051,10 @@ PrefabInstance:
       propertyPath: game
       value: 
       objectReference: {fileID: 1366455484}
+    - target: {fileID: 32337266302529789, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: hudLogic
+      value: 
+      objectReference: {fileID: 1366455480}
     - target: {fileID: 32337266614573628, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1066,6 +1070,10 @@ PrefabInstance:
     - target: {fileID: 32337266614573628, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: -230
+      objectReference: {fileID: 0}
+    - target: {fileID: 32337267021189915, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_ScrollSensitivity
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 32337267295629284, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_fontSize
@@ -1084,9 +1092,21 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 32337267738096835, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_ContentType
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 32337267738096835, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_KeyboardType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 32337267738096835, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_TextComponent
       value: 
       objectReference: {fileID: 214065589}
+    - target: {fileID: 32337267738096835, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_CharacterValidation
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 32337268016584974, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_AnchorMax.y
       value: 1
@@ -1105,7 +1125,7 @@ PrefabInstance:
       objectReference: {fileID: 1366455480}
     - target: {fileID: 5068570272842933106, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5068570272842933106, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
@@ -1372,6 +1392,10 @@ PrefabInstance:
     - target: {fileID: 1136433747589795886, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: EmissionModule.rateOverTime.scalar
       value: 1000
+      objectReference: {fileID: 0}
+    - target: {fileID: 1317793697842630116, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1934105774235494114, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive

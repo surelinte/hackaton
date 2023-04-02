@@ -50,6 +50,7 @@ public class HUDLogic : MonoBehaviour
     {
         LeaderBoard.SetActive(false);
         if (resultSent) {
+            FindObjectOfType<Game>().StartAgain();
             OpenMenu();
             resultSent = false;
         }

@@ -84,6 +84,7 @@ public class Game : MonoBehaviour
         float rnd = 100 * Random.value;
         bool win = rnd < chances[level];
         bulletSlot = 2 * Random.Range(0, 3) + (win ? 1 : 0);
+        // bulletSlot = win ? 1 : 0;
         Debug.Log("random roll " + rnd + " " + chances[level] + " " + bulletSlot);
     }
 

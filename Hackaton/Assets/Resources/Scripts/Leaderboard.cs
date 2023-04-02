@@ -13,6 +13,7 @@ public class Leaderboard : MonoBehaviour
     
     public GameObject content;
     public GameObject entryPrefab;
+    public HUDLogic hudLogic;
 
     [System.Serializable]
     public class LeaderboardPlayerData {
@@ -33,7 +34,11 @@ public class Leaderboard : MonoBehaviour
     }
 
     public void SendScore() {
+        if (inputName.text == "") {
+            return;
+        }
         SendScore(inputName.text, game.GetScore());
+        hudLogic.EnterName();
     }
 
     public void SendScore(string name, int score) {
