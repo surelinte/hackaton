@@ -53,10 +53,10 @@ public class Leaderboard : MonoBehaviour
             foreach (Transform child in content.transform) {
                 GameObject.Destroy(child.gameObject);
             }
-            foreach (LeaderboardPlayerData player in leaderboardData.players)
-            {
+            for (int i = 0; i < leaderboardData.players.Length; i++) {
+                LeaderboardPlayerData player = leaderboardData.players[i];
                 GameObject leaderboardPlayer = Instantiate(entryPrefab, content.transform);
-                leaderboardPlayer.GetComponent<LeaderboardPlayer>().Init(player.name, player.score);
+                leaderboardPlayer.GetComponent<LeaderboardPlayer>().Init(player.name, player.score, i + 1);
             }
         }
     }

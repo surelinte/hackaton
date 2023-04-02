@@ -39,7 +39,6 @@ public class Game : MonoBehaviour
     }
 
     public void PickEnemy() {
-        Debug.Log(currentEnemies.Count + " " + level + " " + enemies.Count);
         if (currentEnemies.Count == 0) {
             if (level == enemies.Count) {
                 SetEnemy(boss);

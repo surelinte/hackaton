@@ -5,8 +5,12 @@ using TMPro;
 
 public class LeaderboardPlayer : MonoBehaviour
 {
-    public TextMeshProUGUI tmpro;
-    public void Init(string name, int score) {
-        tmpro.text = name + ": " + score.ToString() + " Rixcoins";
+    public TextMeshProUGUI _name;
+    public TextMeshProUGUI _score;
+    public TextMeshProUGUI _place;
+    public void Init(string name, int score, int place) {
+        _name.text = name;
+        _score.text = score.ToString();
+        _place.text = place.ToString();
     }
 }

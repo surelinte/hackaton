@@ -759,6 +759,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: LeaderBoard
       objectReference: {fileID: 0}
+    - target: {fileID: 32337266302529785, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 32337266302529786, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -847,10 +851,30 @@ PrefabInstance:
       propertyPath: game
       value: 
       objectReference: {fileID: 1366455484}
+    - target: {fileID: 32337267089279207, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 32337267230132502, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1366455480}
+    - target: {fileID: 32337267629286522, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 32337267629286522, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 32337268186809213, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 32337268186809213, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
+      propertyPath: m_Spacing
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4477275442227404336, guid: bff3e50360f0f914f9e62a8b5e3080e8, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
