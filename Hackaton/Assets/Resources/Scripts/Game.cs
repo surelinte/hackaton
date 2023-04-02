@@ -6,6 +6,8 @@ using UnityEngine.UI;
 
 public class Game : MonoBehaviour
 {
+    const int ENEMIES_COUNT = 7;
+
     public Transform gameTransform;
     public HUDLogic hudLogic;
 
@@ -22,19 +24,30 @@ public class Game : MonoBehaviour
     
     int bulletSlot = 5;
     public List<GameObject> enemies;
-    public GameObject boss;
-    List<GameObject> currentEnemies;
+    List<GameObject> passedEnemies = new List<GameObject>();
+
     Character enemy;
     int level = 0;
 
-    public int[] scores = {100, 300, 500, 1000, 2000, 5000};
-    public float[] chances = {90, 80, 70, 60, 50, 40};
+    public int[] scores = {100, 300, 500, 1000, 2000, 5000, 10000};
+    public float[] chances = {90, 80, 70, 60, 50, 40, 30};
+
+    int[] randomOrder = new int[ENEMIES_COUNT];
     
     public Color[] colors;
     Color color;
 
+    void Shuffle(List<GameObject> list) {
+        for (int currentIndex = list.Count - 1; currentIndex >= 0; currentIndex -= 1) {
+            int randomIndex = Mathf.FloorToInt(Random.value * currentIndex);
+            GameObject temporaryValue = list[currentIndex];
+            list[currentIndex] = list[randomIndex];
+            list[randomIndex] = temporaryValue;
+        }
+    }
+
     public void Start() {
-        currentEnemies = new List<GameObject>(enemies);
+        Shuffle(enemies);
         AddScore(0);
         Roll();
         PickEnemy();
@@ -47,15 +60,9 @@ public class Game : MonoBehaviour
     }
 
     public void PickEnemy() {
-        if (currentEnemies.Count == 0) {
-            if (level == enemies.Count) {
-                SetEnemy(boss);
-                return;
-            }
-            currentEnemies = new List<GameObject>(enemies);
-        }
-        GameObject randomEnemy = currentEnemies[Random.Range(0, currentEnemies.Count)];
-        currentEnemies.Remove(randomEnemy);
+        GameObject randomEnemy = enemies[Random.Range(0, enemies.Count)];
+        enemies.Remove(randomEnemy);
+        passedEnemies.Add(randomEnemy);
         SetEnemy(randomEnemy);
     }
 
@@ -120,7 +127,7 @@ public class Game : MonoBehaviour
         Debug.Log("win");
         int addScore = Mathf.RoundToInt(Random.Range(0.9f * scores[level], 1.1f * scores[level]));
         AddScore(addScore);
-        if (enemy.gameObject == boss) {
+        if (level == ENEMIES_COUNT - 1) {
             hudLogic.TakeMoney();
         }
         else {
@@ -138,6 +145,9 @@ public class Game : MonoBehaviour
         level = 0;
         wheel.SetActive(true);
         trigger.SetActive(false);
+        Shuffle(passedEnemies);
+        enemies.AddRange(passedEnemies);
+        passedEnemies.Clear();
         Roll();
         PickEnemy();
     }
@@ -146,6 +156,9 @@ public class Game : MonoBehaviour
         level++;
         wheel.SetActive(true);
         trigger.SetActive(false);
+        Shuffle(passedEnemies);
+        enemies.AddRange(passedEnemies);
+        passedEnemies.Clear();
         Roll();
         PickEnemy();
     }
