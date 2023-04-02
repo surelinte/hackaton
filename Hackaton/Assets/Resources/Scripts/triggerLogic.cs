@@ -13,7 +13,7 @@ public class triggerLogic : MonoBehaviour
 
     public void Shot()
     {
-        Animator.SetActive(true);
+     //   Animator.SetActive(true);
         Animator.Play("Trigger_on", 0, 1);
         // Animator.SetBool("shot", false);
         // Animator.SetBool("shot", true);
