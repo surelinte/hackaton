@@ -13,6 +13,7 @@ public class HUDLogic : MonoBehaviour
     public GameObject LeaderBoard;
     public GameObject EnterNameWindow;
     public GameObject LeaderList;
+    public GameObject FinalWin;
 
     void Start()
     {
@@ -28,6 +29,7 @@ public class HUDLogic : MonoBehaviour
         FailWindow.SetActive(false);
         GameWindow.SetActive(false);
         LeaderBoard.SetActive(false);
+        FinalWin.SetActive(false);
     }
 
     public void StartGame()
@@ -96,5 +98,9 @@ public class HUDLogic : MonoBehaviour
         GameWindow.SetActive(false);
         GameHUD.SetActive(false);
         MainMenu.SetActive(true);
+    }
+
+    public void ShowFinalWin() {
+        FinalWin.SetActive(true);
     }
 }

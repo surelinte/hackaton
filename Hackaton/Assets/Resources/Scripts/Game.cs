@@ -138,12 +138,19 @@ public class Game : MonoBehaviour
         return score;
     }
 
+    IEnumerator FinalWin() {
+        Sound.Play("win");
+        hudLogic.ShowFinalWin();
+        yield return new WaitForSeconds(5);
+        hudLogic.TakeMoney();
+    }
+
     void Win() {
         Debug.Log("win");
         int addScore = Mathf.RoundToInt(Random.Range(0.9f * scores[level], 1.1f * scores[level]));
         AddScore(addScore);
         if (level == ENEMIES_COUNT - 1) {
-            hudLogic.TakeMoney();
+            StartCoroutine(FinalWin());
         }
         else {
             hudLogic.YouWin();
