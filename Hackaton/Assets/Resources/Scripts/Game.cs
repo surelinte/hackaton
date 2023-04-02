@@ -143,6 +143,7 @@ public class Game : MonoBehaviour
 
     public void StartAgain() {
         level = 0;
+        AddScore(-score);
         wheel.SetActive(true);
         trigger.SetActive(false);
         Shuffle(passedEnemies);
@@ -160,6 +161,7 @@ public class Game : MonoBehaviour
         enemies.AddRange(passedEnemies);
         passedEnemies.Clear();
         Roll();
+        NextColor();
         PickEnemy();
     }
 

@@ -20,9 +20,13 @@ public class HUDLogic : MonoBehaviour
         OpenMenu();
     }
 
+    bool resultSent = false;
+
     public void OpenMenu()
     {
         MainMenu.SetActive(true);
+        WinWindow.SetActive(false);
+        FailWindow.SetActive(false);
         GameWindow.SetActive(false);
         LeaderBoard.SetActive(false);
     }
@@ -44,10 +48,15 @@ public class HUDLogic : MonoBehaviour
     public void CloseLeaderBoard()
     {
         LeaderBoard.SetActive(false);
+        if (resultSent) {
+            OpenMenu();
+            resultSent = false;
+        }
     }
 
     public void EnterName()
     {
+        resultSent = true;
         EnterNameWindow.SetActive(false);
         LeaderList.SetActive(true);
     }
