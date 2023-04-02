@@ -17,6 +17,7 @@ public class Game : MonoBehaviour
     public GameObject wheel;
     public GameObject trigger;
     public Image bullet;
+    public ParticleSystem splash;
     
     int score = 0;
     public TextMeshProUGUI scoreText;
@@ -60,7 +61,12 @@ public class Game : MonoBehaviour
     }
 
     public void PickEnemy() {
-        GameObject randomEnemy = enemies[Random.Range(0, enemies.Count)];
+        if (enemies.Count == 0) {
+            Shuffle(passedEnemies);
+            enemies.AddRange(passedEnemies);
+            passedEnemies.Clear();
+        }
+        GameObject randomEnemy = enemies[0];
         enemies.Remove(randomEnemy);
         passedEnemies.Add(randomEnemy);
         SetEnemy(randomEnemy);
@@ -150,6 +156,7 @@ public class Game : MonoBehaviour
         enemies.AddRange(passedEnemies);
         passedEnemies.Clear();
         Roll();
+        NextColor();
         PickEnemy();
     }
 
@@ -157,9 +164,6 @@ public class Game : MonoBehaviour
         level++;
         wheel.SetActive(true);
         trigger.SetActive(false);
-        Shuffle(passedEnemies);
-        enemies.AddRange(passedEnemies);
-        passedEnemies.Clear();
         Roll();
         NextColor();
         PickEnemy();
@@ -168,5 +172,7 @@ public class Game : MonoBehaviour
     public void NextColor() {
         color = colors[Random.Range(0, colors.Length)];
         bullet.color = color;
+        var main = splash.main;
+        main.startColor = color;
     }
 }
