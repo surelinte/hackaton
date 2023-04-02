@@ -195,6 +195,7 @@ GameObject:
   - component: {fileID: 6199958648972416431}
   - component: {fileID: 5816557642590599134}
   - component: {fileID: 6468889525147343874}
+  - component: {fileID: 1137325014067116868}
   m_Layer: 0
   m_Name: Continue
   m_TagString: Untagged
@@ -329,6 +330,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &1137325014067116868
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3423342102307856156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2575764524220449585, guid: 8bc2660652b3038469756772313a0f3a, type: 3}
+          m_TargetAssemblyTypeName: TextButton, Assembly-CSharp
+          m_MethodName: TaskOnDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2575764524220449585, guid: 8bc2660652b3038469756772313a0f3a, type: 3}
+          m_TargetAssemblyTypeName: TextButton, Assembly-CSharp
+          m_MethodName: TaskOnUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3423342102334363824
 GameObject:
   m_ObjectHideFlags: 0
@@ -341,6 +387,7 @@ GameObject:
   - component: {fileID: 6199958648952263171}
   - component: {fileID: 5816557642566840434}
   - component: {fileID: 6468889525175360430}
+  - component: {fileID: 656772924494671843}
   m_Layer: 0
   m_Name: Finish
   m_TagString: Untagged
@@ -463,6 +510,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &656772924494671843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3423342102334363824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2575764524220449585, guid: 8bc2660652b3038469756772313a0f3a, type: 3}
+          m_TargetAssemblyTypeName: TextButton, Assembly-CSharp
+          m_MethodName: TaskOnDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2575764524220449585, guid: 8bc2660652b3038469756772313a0f3a, type: 3}
+          m_TargetAssemblyTypeName: TextButton, Assembly-CSharp
+          m_MethodName: TaskOnUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3423342103308811879
 GameObject:
   m_ObjectHideFlags: 0
@@ -475,6 +567,7 @@ GameObject:
   - component: {fileID: 6199958647979799764}
   - component: {fileID: 5816557642400454309}
   - component: {fileID: 6468889524134608249}
+  - component: {fileID: 2325104815956011670}
   m_Layer: 0
   m_Name: Leaders
   m_TagString: Untagged
@@ -597,6 +690,51 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &2325104815956011670
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3423342103308811879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0b148fe25e99eb48b9724523833bab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Delegates:
+  - eventID: 2
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2575764524220449585, guid: 8bc2660652b3038469756772313a0f3a, type: 3}
+          m_TargetAssemblyTypeName: TextButton, Assembly-CSharp
+          m_MethodName: TaskOnDown
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+  - eventID: 3
+    callback:
+      m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 2575764524220449585, guid: 8bc2660652b3038469756772313a0f3a, type: 3}
+          m_TargetAssemblyTypeName: TextButton, Assembly-CSharp
+          m_MethodName: TaskOnUp
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
 --- !u!1 &3697329143284572410
 GameObject:
   m_ObjectHideFlags: 0
