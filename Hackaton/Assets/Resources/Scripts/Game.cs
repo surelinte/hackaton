@@ -87,16 +87,24 @@ public class Game : MonoBehaviour
         Debug.Log("random roll " + rnd + " " + chances[level] + " " + bulletSlot);
     }
 
+    IEnumerator ShootCoroutine() {
+        Sound.Play(bulletSlot == 0 ? "fail" : "none");
+        if (bulletSlot == 0) {
+            Lose();
+        }
+        else {
+            yield return new WaitForSeconds(1.5f);
+            bulletSlot--;
+            SetTurnEnemy();
+        }
+    }
+
     public void Shoot() {
         if (turn != Turn.Player) {
             return;
         }
-        if (bulletSlot == 0) {
-            Lose();
-            return;
-        }
-        bulletSlot--;
-        SetTurnEnemy();
+        turn = Turn.Enemy;
+        StartCoroutine(ShootCoroutine());
     }
 
     void SetTurnPlayer() {

@@ -14,7 +14,6 @@ public class HUDLogic : MonoBehaviour
     public GameObject EnterNameWindow;
     public GameObject LeaderList;
 
-
     void Start()
     {
         OpenMenu();

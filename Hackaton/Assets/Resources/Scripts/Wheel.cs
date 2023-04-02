@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class Wheel : MonoBehaviour
 {
-    public enum State { Idle, Roll, Slow, Stop };
+    public enum State { Idle, Start, Roll, Slow, Stop };
     public State state;
 
     public float speed = 1;
     public float timeMin = 2;
     public float timeMax = 3;
+    public float startTime = 0.5f;
     public float slowTime = 0.5f;
     public float stopTime = 1;
 
@@ -18,9 +19,11 @@ public class Wheel : MonoBehaviour
     float timer;
 
     event System.Action onStopped;
+    AudioSource source;
 
     void Start() {
         slowSpeed = speed / slowTime;
+        source = FindObjectOfType<AudioSource>();
     }
 
     public void Subscribe(System.Action action) {
@@ -29,9 +32,10 @@ public class Wheel : MonoBehaviour
 
     public void Roll() {
         if (state == State.Idle) {
-            rotateSpeed = speed;
-            timer = Random.Range(timeMin, timeMax);
-            state = State.Roll;
+            Sound.Play("drumRoll");
+            rotateSpeed = 0;
+            timer = startTime;
+            state = State.Start;
         }
     }
 
@@ -41,13 +45,24 @@ public class Wheel : MonoBehaviour
         }
         transform.Rotate(0, 0, -rotateSpeed * Time.deltaTime);
         timer -= Time.deltaTime;
-        if (state == State.Roll) {
+        if (state == State.Start) {
+            rotateSpeed += slowSpeed * Time.deltaTime;
+            if (rotateSpeed > speed) {
+                rotateSpeed = speed;
+            }
+            if (timer < 0) {
+                timer = Random.Range(timeMin, timeMax);
+                state = State.Roll;
+            }
+        }
+        else if (state == State.Roll) {
             if (timer < 0) {
                 timer = slowTime;
                 state = State.Slow;
             }
         }
         else if (state == State.Slow) {
+            source.volume = timer / slowTime;
             rotateSpeed -= slowSpeed * Time.deltaTime;
             if (rotateSpeed < 0) {
                 rotateSpeed = 0;
@@ -58,6 +73,8 @@ public class Wheel : MonoBehaviour
             }
         }
         if (state == State.Stop) {
+            source.Stop();
+            source.volume = 1;
             if (timer < 0) {
                 timer = 0;
                 state = State.Idle;

@@ -52,9 +52,11 @@ public class Character : MonoBehaviour
             // splash, shoot sound, etc
             splash.color = game.GetColor();
             splash.gameObject.SetActive(true);
+            Sound.Play("fail");
         }
         else {
             // click sound
+            Sound.Play("none");
         }
         yield return new WaitForSeconds(1);
         PortraitShooting.SetActive(false);

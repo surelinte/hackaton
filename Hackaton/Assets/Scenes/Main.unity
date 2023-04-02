@@ -538,6 +538,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1085468850}
   - component: {fileID: 1085468851}
+  - component: {fileID: 1085468852}
   m_Layer: 0
   m_Name: Audio
   m_TagString: Untagged
@@ -656,6 +657,25 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1085468852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1085468849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c545c23b48adc1489b16c5dd376d40b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  click: {fileID: 8300000, guid: d29700311d9d66044ac88e7f01dd2b33, type: 3}
+  drumRoll: {fileID: 8300000, guid: f07bd277662395b4fb34da84bcabbb83, type: 3}
+  enemy: {fileID: 8300000, guid: fee42b580e0236f41b6c5167a165ee50, type: 3}
+  fail: {fileID: 8300000, guid: c9a44dff0d55eb24994d6fdf85f13cbc, type: 3}
+  money: {fileID: 8300000, guid: f0a8b5bacb8d6ec41bd28de640922d14, type: 3}
+  none: {fileID: 8300000, guid: baef5c75391e38b4d9f257eaec32117e, type: 3}
+  win: {fileID: 8300000, guid: 0620a418741686a43a176491bd152645, type: 3}
 --- !u!1 &1140775507
 GameObject:
   m_ObjectHideFlags: 0
@@ -1223,6 +1243,18 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1366455480}
+    - target: {fileID: 3948488423899578103, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: timeMax
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948488423899578103, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: timeMin
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3948488423899578103, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: startTime
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 3948488424029248230, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
