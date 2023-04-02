@@ -74,7 +74,7 @@ public class Game : MonoBehaviour
 
     void SetEnemy(GameObject gameObj) {
         if (enemy != null) {
-            enemy.gameObject.SetActive(false);
+            enemy.Hide();
         }
         gameObj.SetActive(true);
         enemy = gameObj.GetComponent<Character>();
@@ -174,6 +174,10 @@ public class Game : MonoBehaviour
         Roll();
         NextColor();
         PickEnemy();
+    }
+
+    public Color GetColor() {
+        return color;
     }
 
     public void NextColor() {
