@@ -4,17 +4,17 @@
 			"id": "Dalton",
 			"name": "Rix Dalton",
 			"lines": [
-				"Is it worth it?.. They won’t open the Playrix Shop anyway.",
+				"Is it worth it?.. They won’t open the PlayrixShop anyway.",
 				"Rixcoins will burn again, and so will you. Think, cowboy.",
-				"They always called me reckless... But this time? You might be the reckless one!"
+				"They always called me reckless… But this time? You might be the reckless one!"
 			]
 		},
 		{
 			"id": "Smooth",
 			"name": "Shurix Smooth",
 			"lines": [
-				"Psst, hey kid... Wanna buy some rixcoins? Imported stuff. Half price for you.",
-				"Still got time to grab some rixcoins from me… Sure, the Rix on the coin doesn’t have a tail, but who cares.",
+				"Psst, hey kid… Wanna buy some Rixcoins? Imported stuff. Half price for you.",
+				"Still got time to grab some Rixcoins from me… Sure, the Rix on the coin doesn’t have a tail, but who cares.",
 				"You’ve got good aim, haha. Go on, take the shot."
 			]
 		},
@@ -22,7 +22,7 @@
 			"id": "Costin",
 			"name": "C'ostin",
 			"lines": [
-				"I decided to invest my rixcoins in a little growth experiment… You know, lilies, gladioluses…",
+				"I decided to invest my Rixcoins in a little growth experiment… You know, lilies, gladioluses…",
 				"Thinking of hitting on this one chick. Or maybe not… I pull a trigger more confidently than I flirt anyway.",
 				"This bar’s so messy I’m about to get a nervous twitch… Can we just end this already?"
 			]
@@ -31,7 +31,7 @@
 			"id": "Hackathoncij",
 			"name": "Hackathoncius",
 			"lines": [
-				"Ancient wisdom says: not everything that shines is a rixcoin.",
+				"Ancient wisdom says: not everything that shines is a Rixcoin.",
 				"You never know where you’ll find something, or where you’ll lose it… You should think about that!",
 				"The road is mastered by the one who walks it. In your case — the one who walks it to the end."
 			]
@@ -42,23 +42,23 @@
 			"lines": [
 				"Your obsession with rixcoins… would you say it started in childhood?",
 				"You chose to keep playing. What did you feel at that moment?",
-				"Let’s put your worries on the back burner… Oh, and that'll be $500."
+				"Let’s put your worries on the back burner… Oh, and that'll be R500."
 			]
 		},
 		{
 			"id": "Horney",
 			"name": "Jessica Horney",
 			"lines": [
-				"Hey, handsome! Want me to show you my… rixcoins?",
+				"Hey, handsome! Want me to show you my… Rixcoins?",
 				"I see you like round things. Mmm… let’s go another round.",
 				"You like bringing girls to the finish line… Well then — final shot. And please, no misfires."
 			]
 		},
 		{
 			"id": "Playrixcone",
-			"name": "Rixo Playrixcone",
+			"name": "Rix Playrixcone",
 			"lines": [
-				"You ask me for rixcoins, but you do it without respect.",
+				"You ask me for Rixcoins, but you do it without respect.",
 				"You don’t offer friendship, you don’t call me Playrixcone… Very well, shoot.",
 				"The moment of truth!"
 			]
@@ -85,7 +85,7 @@
 			"id": "Hellothere",
 			"name": "Obi-Tu Hellothere",
 			"lines": [
-				"Wanderer… These aren't the rixcoins you’re looking for…",
+				"Wanderer… These aren't the Rixcoins you’re looking for…",
 				"You were supposed to fight evil, not join it! But if that’s how you want it…",
 				"I am your father! …Okay, you’re not that gullible. Final shot."
 			]

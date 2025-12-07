@@ -131,7 +131,7 @@ public class Game : MonoBehaviour
     void AddScore(int add) {
         score += add;
         scoreText.text = score.ToString();
-        winScoreText.text = "Рикскоины: " + score.ToString();
+        winScoreText.text = "Rixcoins: " + score.ToString();
     }
 
     public int GetScore() {
