@@ -1404,6 +1404,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1441498721990032054, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
+      propertyPath: m_text
+      value: Take a Rix again
+      objectReference: {fileID: 0}
     - target: {fileID: 1934105774235494114, guid: d9deee3b321fef8458f1a9e015ba6e47, type: 3}
       propertyPath: m_IsActive
       value: 0
